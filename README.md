@@ -1,5 +1,4 @@
-# Digital-IC-Placer-based-on-Python
-基于Python与模拟退火算法的数字IC布局器
+# 基于Python与模拟退火算法的数字IC布局器
 本项目是一个基于Python实现的数字集成电路（Digital IC）宏观/标准单元布局（Placement）算法原型。本程序从零开始构建了布局器的完整工作流，核心采用**模拟退火算法（Simulated Annealing, SA）**进行全局优化，并以**半周长线长（HPWL）**作为主要评估指标，最终输出合法化（Legalized）的布局结果并提供可视化。
 
 ## 🌟 核心算法与物理原理
