@@ -31,7 +31,9 @@ $$ Cost = \sum_{e \in E} HPWL(e) $$
 在每次位置扰动（例如随机交换两个Cell的位置）后，计算能量变化 $\Delta E = E_{new} - E_{old}$：
 1. 若 $\Delta E < 0$（线长变短），则**100%接受**该新布局。
 2. 若 $\Delta E > 0$（线长变长），则以概率 $P$ 接受该较差的布局：
-   $$ P = \exp\left(-\frac{\Delta E}{k \cdot T}\right) $$
+   $$
+   P = \exp\left(-\frac{\Delta E}{k \cdot T}\right)
+   $$
    *(其中 $k$ 为常数，实际编程中通常融入 $T$ 中)*
 
 > **物理意义：** 允许在高温阶段以较大增幅接受劣解，赋予算法**“跳出局部最优解（Local Optima）”**的能力。随着温度 $T$ 按照退火时间表（如 $T_{k+1} = \alpha T_k, \alpha \approx 0.95$）不断下降，接受劣解的概率趋近于0，算法最终收敛于全局最优或近似全局最优解。
